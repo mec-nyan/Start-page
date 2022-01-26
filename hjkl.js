@@ -29,6 +29,7 @@ let col = 0;
 rects[row][col].classList.add("selected");
 
 let prefix = 1;
+let command = "";
 
 const select = (key) => {
   switch (key) {
@@ -47,6 +48,22 @@ const select = (key) => {
     case "l":
       col = col + prefix <= 4 ? col + prefix : 4;
       prefix = 1;
+      break;
+    case "0":
+      col = 0;
+      break;
+    case "$":
+      col = 4;
+      break;
+    case "g":
+      if (command.length === 0) command = "g";
+      else if (command === "g") {
+        row = 0;
+        command = "";
+      }
+      break;
+    case "G":
+      row = 7;
       break;
     case "2":
     case "3":

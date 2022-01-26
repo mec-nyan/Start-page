@@ -17,30 +17,38 @@ body {
 
 #big {
   box-sizing: border-box;
-  border: 1px solid hsl(250, 12%, 30%);
   width: calc(100% - 50px);
   height: calc(100% - 50px);
   display: grid;
   padding: 10px;
-  gap: 10px;
-  grid-template: repeat(8, 1fr) / repeat(4, 1fr);
+  gap: 20px;
+  grid-template: repeat(8, 1fr) / repeat(5, 1fr);
+  position: relative;
 }
 
-.color0,
-.color1,
-.color2,
-.color3,
-.color4,
-.color5,
-.color6,
-.color7,
 .rect {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  border: 1px solid hsl(250, 12%, 30%);
+  background-color: hsl(250, 12%, 24%);
 }
 
-.selected {
-  border: 1px solid hsl(50, 50%, 70%);
+.rect img {
+  height: 100%;
+  width: 60px;
+  background-color: hsl(250, 14%, 28%);
+  border: none;
+  outline: none;
+  object-fit: contain;
+}
+
+#selector {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 12.5%;
+  outline: 1px solid hsl(250, 25%, 50%);
+  box-sizing: border-box;
+  transition: all 500ms;
 }

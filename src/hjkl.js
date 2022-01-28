@@ -1,4 +1,5 @@
-import debianLogo from "./debian.png";
+import debianLogo from "./img/debian.png";
+import "./hjkl.css";
 
 const root = document.querySelector("#root");
 

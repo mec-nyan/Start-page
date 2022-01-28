@@ -1,3 +1,5 @@
+import debianLogo from "./debian.png";
+
 const root = document.querySelector("#root");
 
 const big = document.createElement("div");
@@ -12,7 +14,7 @@ for (let i = 0; i < 8; ++i) {
     const rect = document.createElement("div");
     rect.setAttribute("class", "rect");
     const img = document.createElement("img");
-    img.src = "./img/debian.png";
+    img.src = debianLogo;
     img.alt = "";
     rect.appendChild(img);
     rects[i].push(rect);

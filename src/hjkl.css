@@ -18,11 +18,11 @@ body {
 
 #big {
   box-sizing: border-box;
-  width: calc(100% - 50px);
-  height: calc(100% - 50px);
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
   display: grid;
-  padding: 15px;
-  gap: 30px;
+  padding: 20px;
+  gap: 40px;
   grid-template: repeat(8, 1fr) / repeat(5, 1fr);
   position: relative;
 }
@@ -43,10 +43,11 @@ body {
 .rect img {
   height: 100%;
   width: 25%;
-  background-color: hsl(247, 10%, 21%);
+  background-color: hsl(247, 10%, 22%);
   border: none;
   outline: none;
   object-fit: scale-down;
+  opacity: 0.65;
   transition: all 500ms 300ms;
 }
 
@@ -66,12 +67,13 @@ body {
 }
 
 .selected {
-  background-color: hsl(247, 12%, 24%);
+  background-color: hsl(247, 12%, 22%);
+  box-shadow: 0px 0px 8px hsl(220, 91%, 75%);
   outline: none;
 }
 
 .selected img {
-  background-color: hsl(247, 14%, 28%);
+  background-color: hsl(247, 14%, 25%);
 }
 
 .text {
@@ -79,7 +81,7 @@ body {
   margin: auto;
   margin-left: 11px;
   color: hsl(247, 14%, 48%);
-  transition: 500ms color 300ms;
+  transition: all 500ms 300ms;
   font-size: 14px;
 }
 

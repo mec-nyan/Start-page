@@ -1,6 +1,8 @@
-import debianLogo from "./img/debian.png";
+import * as Images from "./images";
 import "./hjkl.css";
+import { sayHi } from "./module";
 
+sayHi("If you can read this, you're going mad...");
 const root = document.querySelector("#root");
 
 const big = document.createElement("div");
@@ -10,16 +12,39 @@ root.appendChild(big);
 
 const rects = [[], [], [], [], [], [], [], []];
 
+class Rect {
+  constructor(img) {
+    this.div = document.createElement("div");
+    this.div.setAttribute("class", "rect");
+    this.img = document.createElement("img");
+    this.img.src = img.src;
+    this.img.alt = img.alt;
+    this.text = document.createElement("div");
+    this.text.setAttribute("class", "text");
+    this.text.innerHTML = img.text;
+    this.div.appendChild(this.img);
+    this.div.appendChild(this.text);
+  }
+
+  setText(text) {
+    this.text.innerHTML = text;
+  }
+}
+
+const availableKeys = Object.keys(Images);
+
 for (let i = 0; i < 8; ++i) {
   for (let j = 0; j < 5; ++j) {
-    const rect = document.createElement("div");
-    rect.setAttribute("class", "rect");
-    const img = document.createElement("img");
-    img.src = debianLogo;
-    img.alt = "";
-    rect.appendChild(img);
-    rects[i].push(rect);
-    big.appendChild(rect);
+    const index = j + 5 * i;
+    let rect;
+    if (index < availableKeys.length) {
+      rect = new Rect(Images[availableKeys[index]]);
+    } else {
+      rect = new Rect(Images.debian);
+      rect.setText("Generic");
+    }
+    rects[i].push(rect.div);
+    big.appendChild(rect.div);
   }
 }
 

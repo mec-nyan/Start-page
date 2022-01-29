@@ -4,7 +4,8 @@
 }
 
 body {
-  background-color: hsl(250, 9%, 20%);
+  background-color: hsl(247, 10%, 18%);
+  font-family: "Hack Nerd Font Mono";
 }
 
 #root {
@@ -29,17 +30,20 @@ body {
 .rect {
   width: 100%;
   max-height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   overflow: hidden;
   box-sizing: border-box;
-  outline: 2px solid hsl(250, 12%, 24%);
-  background-color: hsl(250, 9%, 19%);
+  outline: 2px solid hsl(247, 12%, 24%);
+  background-color: hsl(247, 9%, 19%);
   transition: all 500ms 300ms;
 }
 
 .rect img {
   height: 100%;
   width: 25%;
-  background-color: hsl(250, 10%, 21%);
+  background-color: hsl(247, 10%, 21%);
   border: none;
   outline: none;
   object-fit: scale-down;
@@ -52,7 +56,7 @@ body {
   left: 0;
   width: 20%;
   height: 12.5%;
-  outline: 1px dotted hsl(220, 91%, 75%);
+  outline: 1px solid hsl(220, 91%, 75%);
   box-sizing: border-box;
   box-shadow: 0px 0px 8px hsl(220, 50%, 44%), 0px 0px 4px hsl(220, 51%, 64%),
     inset 0px 0px 8px hsl(220, 50%, 44%), inset 0px 0px 4px hsl(220, 51%, 64%);
@@ -62,10 +66,23 @@ body {
 }
 
 .selected {
-  background-color: hsl(250, 12%, 24%);
+  background-color: hsl(247, 12%, 24%);
   outline: none;
 }
 
 .selected img {
-  background-color: hsl(250, 14%, 28%);
+  background-color: hsl(247, 14%, 28%);
+}
+
+.text {
+  display: flex;
+  margin: auto;
+  margin-left: 11px;
+  color: hsl(247, 14%, 48%);
+  transition: 500ms color 300ms;
+  font-size: 14px;
+}
+
+.selected .text {
+  color: hsl(247, 14%, 78%);
 }

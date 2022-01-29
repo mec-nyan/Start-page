@@ -1,4 +1,4 @@
-import * as Images from "./images";
+import Grid from "./images";
 import "./hjkl.css";
 import { sayHi } from "./module";
 
@@ -31,18 +31,9 @@ class Rect {
   }
 }
 
-const availableKeys = Object.keys(Images);
-
 for (let i = 0; i < 8; ++i) {
   for (let j = 0; j < 5; ++j) {
-    const index = j + 5 * i;
-    let rect;
-    if (index < availableKeys.length) {
-      rect = new Rect(Images[availableKeys[index]]);
-    } else {
-      rect = new Rect(Images.debian);
-      rect.setText("Generic");
-    }
+    const rect = new Rect(Grid.get(i, j));
     rects[i].push(rect.div);
     big.appendChild(rect.div);
   }

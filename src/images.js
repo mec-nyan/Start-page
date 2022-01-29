@@ -16,13 +16,15 @@ import RPi from "./img/RPi-Logo-small.png";
 import Typescript from "./img/ts.png";
 import W3schools from "./img/w3schools.svg";
 import Youtube from "./img/youtube.png";
+import Sheets from "./img/google-sheets.png";
+import MDN from "./img/mdn-logo-png-transparent.png";
 
 class Link {
-  constructor(src, alt, url = "https://", text = "Sample text") {
+  constructor(src, alt = "", url = [], text = "") {
     this.src = src;
     this.alt = alt;
-    this.text = text;
     this.url = url;
+    this.text = text;
   }
 }
 
@@ -39,7 +41,7 @@ class Grid {
     for (let i = 0; i < rows; ++i) {
       const newRow = [];
       for (let j = 0; j < cols; ++j) {
-        newRow.push(new Link(Debian, "empty", null, null));
+        newRow.push(new Link(Debian));
       }
       this.grid.push(newRow);
     }
@@ -63,43 +65,121 @@ const grid = new Grid(ROWS, COLS);
 console.log(grid.grid);
 
 // Languages
-const cpp = new Link(Cpp, "Cpp", null, "Cpp");
-const javascript = new Link(Javascript, "Javascript", null, "Javascript");
-const ts = new Link(Typescript, "Typescript", null, "Typescript");
-const python = new Link(Python, "Python", null, "Python");
-const lua = new Link(Lua, "Lua", null, "Lua");
+const cpp = new Link(
+  Cpp,
+  "Cpp",
+  ["http://en.cppreference.com/w/"],
+  "Cpp reference"
+);
+const javascript = new Link(
+  Javascript,
+  "Javascript",
+  ["https://developer.mozilla.org/en-US/docs/Web/JavaScript"],
+  "Javascript"
+);
+const ts = new Link(
+  Typescript,
+  "Typescript",
+  ["https://www.typescriptlang.org/"],
+  "Typescript"
+);
+const python = new Link(
+  Python,
+  "Python",
+  ["https://www.python.org/"],
+  "Python"
+);
+const lua = new Link(Lua, "Lua", ["https://www.lua.org/"], "Lua");
 
 // React libraries
-const react = new Link(React, "React", null, "React");
-const mui = new Link(Mui, "Mui", null, "Mui");
-const w3schools = new Link(W3schools, "W3schools", null, "W3schools");
+const react = new Link(React, "React", ["https://reactjs.org/"], "React");
+const mui = new Link(Mui, "Mui", ["https://mui.com/"], "Mui");
+const w3schools = new Link(
+  W3schools,
+  "W3schools",
+  ["https://www.w3schools.com/"],
+  "W3schools"
+);
+const mdn = new Link(
+  MDN,
+  "MDN",
+  ["https://developer.mozilla.org/en-US/"],
+  "MDM Web docs"
+);
 
 // Services
-const github = new Link(Github, "Octocat", null, "Github");
-const mail = new Link(Mail, "Mail", null, "Gmail");
-const calendar = new Link(Calendar, "Google", null, "Calendar");
-const youtube = new Link(Youtube, "Youtube", null, "Youtube");
-const duolingo = new Link(Duolingo, "Duolingo", null, "Duolingo");
-const codewars = new Link(Codewars, "Codewars", null, "Codewars");
+const github = new Link(
+  Github,
+  "Github",
+  [
+    "https://github.com/mec-nyan",
+    "https://github.com/marianoRpi",
+    "https://github.com/Henry-Devs/talent",
+  ],
+  "Github"
+);
+const mail = new Link(Mail, "Mail", [], "Gmail");
+const calendar = new Link(Calendar, "Google", [], "Calendar");
+const youtube = new Link(
+  Youtube,
+  "Youtube",
+  ["https://www.youtube.com/"],
+  "Youtube"
+);
+const duolingo = new Link(
+  Duolingo,
+  "Duolingo",
+  ["https://www.duolingo.com/"],
+  "Duolingo"
+);
+const codewars = new Link(
+  Codewars,
+  "Codewars",
+  ["https://www.codewars.com/"],
+  "Codewars"
+);
 
 // Dictionaries
 const cambridge = new Link(
   Cambridge,
   "Cambridge",
-  null,
+  "https://dictionary.cambridge.org/",
   "Cambridge dictionary"
 );
-const macmillan = new Link(Macmillan, "Macmillan", null, "Macmillan");
+const macmillan = new Link(
+  Macmillan,
+  "Macmillan",
+  "https://www.macmillandictionary.com/",
+  "Macmillan"
+);
 
 // Misc
-const debian = new Link(Debian, "Debian", null, "Debian");
-const rpi = new Link(RPi, "RPi", null, "RPi");
+const debian = new Link(
+  Debian,
+  "Debian, the universal OS",
+  "https://www.debian.org/",
+  "Debian"
+);
+const rpi = new Link(
+  RPi,
+  "RPi",
+  "https://www.raspberrypi.org/",
+  "Raspberry Pi"
+);
+const newsletter = new Link(
+  Sheets,
+  "Newsletter",
+  [
+    "https://docs.google.com/spreadsheets/d/1LT3QebiD8RouHwf0Uyi14OZuLjUfte4LSich8NStWjk/edit#gid=0",
+  ],
+  "Newsletter"
+);
 
 const languages = [cpp, javascript, ts, python, lua];
-const libraries = [react, mui, w3schools];
+const libraries = [react, mui, mdn, w3schools];
 const services = [github, mail, calendar, youtube, duolingo, codewars];
 const dictionaries = [cambridge, macmillan];
-const misc = [debian, rpi];
+const misc = [debian, rpi, newsletter];
 
 grid.insertColumn(0, languages);
 grid.insertColumn(1, libraries);

@@ -1,23 +1,29 @@
+import CRA from "./img/create-react-app.svg";
+import Calendar from "./img/google-calendar-logo.png";
 import Cambridge from "./img/cambridge.png";
 import Codewars from "./img/codewars.png";
 import Cpp from "./img/cpp.png";
 import Debian from "./img/debian.png";
 import Duolingo from "./img/duolingo_logo.png";
-import Calendar from "./img/google-calendar-logo.png";
+import Github from "./img/Octocat.png";
 import Javascript from "./img/javascript-logo.png";
 import Lua from "./img/lua_logo.png";
+import MDN from "./img/mdn-logo-png-transparent.png";
 import Macmillan from "./img/macmillan.png";
 import Mail from "./img/mail.png";
 import Mui from "./img/mui.png";
-import Github from "./img/Octocat.png";
 import Python from "./img/python.svg";
-import React from "./img/react.svg";
 import RPi from "./img/RPi-Logo-small.png";
+import React from "./img/react.svg";
+import Router from "./img/react-router-logo.png";
+import Sheets from "./img/google-sheets.png";
 import Typescript from "./img/ts.png";
 import W3schools from "./img/w3schools.svg";
+import Webpack from "./img/webpack.svg";
 import Youtube from "./img/youtube.png";
-import Sheets from "./img/google-sheets.png";
-import MDN from "./img/mdn-logo-png-transparent.png";
+
+import { NEWSLETTER } from "./.env";
+console.log("NEWSLETTER: ", NEWSLETTER);
 
 class Link {
   constructor(src, alt = "", url = [], text = "") {
@@ -94,6 +100,24 @@ const lua = new Link(Lua, "Lua", ["https://www.lua.org/"], "Lua");
 // React libraries
 const react = new Link(React, "React", ["https://reactjs.org/"], "React");
 const mui = new Link(Mui, "Mui", ["https://mui.com/"], "Mui");
+const cra = new Link(
+  CRA,
+  "create react app",
+  ["https://create-react-app.dev/"],
+  "Create react app"
+);
+const router = new Link(
+  Router,
+  "React router",
+  ["https://reactrouterdotcom.fly.dev/docs/en/v6"],
+  "React router"
+);
+const webpack = new Link(
+  Webpack,
+  "Webpack",
+  ["https://reactrouterdotcom.fly.dev/docs/en/v6"],
+  "Webpack"
+);
 const w3schools = new Link(
   W3schools,
   "W3schools",
@@ -166,17 +190,10 @@ const rpi = new Link(
   "https://www.raspberrypi.org/",
   "Raspberry Pi"
 );
-const newsletter = new Link(
-  Sheets,
-  "Newsletter",
-  [
-    "https://docs.google.com/spreadsheets/d/1LT3QebiD8RouHwf0Uyi14OZuLjUfte4LSich8NStWjk/edit#gid=0",
-  ],
-  "Newsletter"
-);
+const newsletter = new Link(Sheets, "Newsletter", [,], "Newsletter");
 
-const languages = [cpp, javascript, ts, python, lua];
-const libraries = [react, mui, mdn, w3schools];
+const languages = [cpp, javascript, ts, python, lua, mdn, w3schools];
+const libraries = [react, mui, cra, router, webpack];
 const services = [github, mail, calendar, youtube, duolingo, codewars];
 const dictionaries = [cambridge, macmillan];
 const misc = [debian, rpi, newsletter];

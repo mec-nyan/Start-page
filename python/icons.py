@@ -31,7 +31,16 @@ black = 16
 white = 231
 blue = 33
 yellow = 220
+red = 1
+green = 2
 default = -1
+
+
+def put_icon(y, x, window, icon):
+    for i in range(len(icon)):
+        for j in range(len(icon[i])):
+            window.addstr(
+                y + i, x + j, icon[i][j][0], icon[i][j][1])
 
 
 def main(screen):
@@ -43,17 +52,25 @@ def main(screen):
     curses.init_pair(2, blue, white)
     curses.init_pair(3, yellow, white)
     curses.init_pair(4, blue, yellow)
+    curses.init_pair(5, blue, default)
+    curses.init_pair(6, yellow, default)
+    curses.init_pair(7, green, default)
+    curses.init_pair(8, red, default)
 
     white_on_black = curses.color_pair(1)
     blue_on_white = curses.color_pair(2)
     yellow_on_white = curses.color_pair(3)
     blue_on_yellow = curses.color_pair(4)
+    blue_on_black = curses.color_pair(5)
+    yellow_on_black = curses.color_pair(6)
+    green_on_black = curses.color_pair(7)
+    red_on_black = curses.color_pair(8)
 
     lines, columns = screen.getmaxyx()
 
     window = curses.newwin(lines, columns, 0, 0)
 
-    icon = [
+    python_w_border = [
         [
             [bottom_right, white_on_black],
             [minus_tl, white_on_black],
@@ -80,13 +97,68 @@ def main(screen):
         ],
     ]
 
+    python_no_border = [
+        [
+            [space, white_on_black],
+            [space, white_on_black],
+            [lower_half, blue_on_black],
+            [lower_half, blue_on_black],
+            [space, white_on_black],
+            [space, white_on_black],
+        ],
+        [
+            [space, white_on_black],
+            [full_block, blue_on_white],
+            [upper_half, blue_on_yellow],
+            [upper_half, blue_on_yellow],
+            [full_block, yellow_on_white],
+            [space, white_on_black],
+        ],
+        [
+            [space, white_on_black],
+            [space, white_on_black],
+            [upper_half, yellow_on_black],
+            [upper_half, yellow_on_black],
+            [space, white_on_black],
+            [space, white_on_black],
+        ],
+    ]
+
+    raspberry_pi = [
+        [
+            [space, white_on_black],
+            [minus_bl, green_on_black],
+            [minus_tr, green_on_black],
+            [minus_tl, green_on_black],
+            [minus_br, green_on_black],
+            [space, white_on_black],
+        ],
+        [
+            [bottom_right, red_on_black],
+            [minus_bl, red_on_black],
+            [minus_tl, red_on_black],
+            [minus_tr, red_on_black],
+            [minus_br, red_on_black],
+            [bottom_left, red_on_black],
+        ],
+        [
+            [space, white_on_black],
+            [upper_half, red_on_black],
+            [minus_tl, red_on_black],
+            [minus_tr, red_on_black],
+            [upper_half, red_on_black],
+            [space, white_on_black],
+        ],
+    ]
+
+    icons = [python_w_border, python_no_border, raspberry_pi]
+
     margin_top = 2
     margin_left = 4
+    icon_w = 10
 
-    for i in range(len(icon)):
-        for j in range(len(icon[i])):
-            window.addstr(
-                margin_top + i, margin_left + j, icon[i][j][0], icon[i][j][1])
+    for i in range(len(icons)):
+        put_icon(margin_top, margin_left + icon_w * i, window, icons[i])
 
     window.getch()
 

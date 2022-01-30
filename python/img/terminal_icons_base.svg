@@ -23,11 +23,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="9.0273966"
-     inkscape:cx="55.725645"
-     inkscape:cy="28.555118"
+     inkscape:zoom="13.066667"
+     inkscape:cx="30"
+     inkscape:cy="30"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:window-width="1920"
@@ -88,13 +88,15 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
+     inkscape:label="py"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     style="display:none"
+     sodipodi:insensitive="true">
     <path
        id="rect1059"
        style="fill:#4a78be;fill-opacity:1;stroke-width:5.66929;stroke-linecap:round"
-       d="M 20 10 L 20 20 L 10 20 L 10 40 L 20 40 L 20 30 L 40 30 L 40 10 L 20 10 z "
+       d="M 20,10 V 20 H 10 V 40 H 20 V 30 H 40 V 10 Z"
        transform="scale(0.26458333)" />
     <path
        id="path1064"
@@ -103,7 +105,104 @@
     <path
        id="rect1068"
        style="fill:#ffffff;fill-opacity:1;stroke-width:5.66929;stroke-linecap:round"
-       d="M 15 0 L 15 10 L 5 10 L 5 20 L 0 20 L 0 40 L 5 40 L 5 50 L 15 50 L 15 60 L 45 60 L 45 50 L 55 50 L 55 40 L 60 40 L 60 20 L 55 20 L 55 10 L 45 10 L 45 0 L 15 0 z M 20 10 L 40 10 L 40 20 L 50 20 L 50 40 L 40 40 L 40 50 L 20 50 L 20 40 L 10 40 L 10 20 L 20 20 L 20 10 z "
+       d="M 15,0 V 10 H 5 V 20 H 0 V 40 H 5 V 50 H 15 V 60 H 45 V 50 H 55 V 40 h 5 V 20 H 55 V 10 H 45 V 0 Z m 5,10 H 40 V 20 H 50 V 40 H 40 V 50 H 20 V 40 H 10 V 20 h 10 z"
        transform="scale(0.26458333)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="pi"
+     style="display:inline">
+    <rect
+       style="opacity:1;fill:#008000;fill-opacity:1;stroke-width:1.5;stroke-linecap:round"
+       id="rect1191"
+       width="3.9687502"
+       height="2.6458333"
+       x="2.6458333"
+       y="0" />
+    <rect
+       style="opacity:1;fill:#008000;fill-opacity:1;stroke-width:1.5;stroke-linecap:round"
+       id="rect1193"
+       width="3.96875"
+       height="2.6458333"
+       x="9.260417"
+       y="0" />
+    <rect
+       style="opacity:1;fill:#008000;fill-opacity:1;stroke-width:1.5;stroke-linecap:round"
+       id="rect1195"
+       width="7.9375"
+       height="2.6458333"
+       x="3.96875"
+       y="2.6458333" />
+    <rect
+       style="opacity:1;fill:#d35f5f;fill-opacity:1;stroke-width:1.5;stroke-linecap:round"
+       id="rect1197"
+       width="10.583333"
+       height="2.6458333"
+       x="2.6458333"
+       y="5.2916665" />
+    <rect
+       style="opacity:1;fill:#d35f5f;fill-opacity:1;stroke-width:1.5;stroke-linecap:round"
+       id="rect1199"
+       width="13.229166"
+       height="2.6458333"
+       x="1.3229166"
+       y="7.9375" />
+    <rect
+       style="opacity:1;fill:#d35f5f;fill-opacity:1;stroke-width:1.5;stroke-linecap:round"
+       id="rect1201"
+       width="10.583333"
+       height="2.6458333"
+       x="2.6458333"
+       y="10.583333" />
+    <rect
+       style="opacity:1;fill:#d35f5f;fill-opacity:1;stroke-width:1.5;stroke-linecap:round"
+       id="rect1203"
+       width="5.291667"
+       height="2.6458333"
+       x="5.2916665"
+       y="13.229166" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:1.5;stroke-linecap:round"
+       id="rect1205"
+       width="1.3229166"
+       height="2.6458333"
+       x="2.6458333"
+       y="7.9375" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:1.5;stroke-linecap:round"
+       id="rect1207"
+       width="1.3229166"
+       height="2.6458333"
+       x="11.90625"
+       y="7.9375" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:1.5;stroke-linecap:round"
+       id="rect1209"
+       width="1.3229166"
+       height="2.6458333"
+       x="5.2916665"
+       y="10.583333" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:1.5;stroke-linecap:round"
+       id="rect1211"
+       width="1.3229166"
+       height="2.6458333"
+       x="9.260417"
+       y="10.583333" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:1.5;stroke-linecap:round"
+       id="rect1213"
+       width="1.3229166"
+       height="2.6458333"
+       x="5.2916665"
+       y="5.2916665" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:1.5;stroke-linecap:round"
+       id="rect1215"
+       width="1.3229166"
+       height="2.6458333"
+       x="9.260417"
+       y="5.2916665" />
   </g>
 </svg>

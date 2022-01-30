@@ -10,3 +10,4 @@
 #/.pnp.*
 
 .env.js
+__pycache__/

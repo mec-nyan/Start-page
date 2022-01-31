@@ -16,6 +16,7 @@ class Rect {
   constructor(img) {
     this.div = document.createElement("div");
     this.div.setAttribute("class", "rect");
+    this.div.classList.add(img.className);
     this.img = document.createElement("img");
     this.img.src = img.src;
     this.img.alt = img.alt;

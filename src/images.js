@@ -26,11 +26,12 @@ import { NEWSLETTER } from "./.env";
 console.log("NEWSLETTER: ", NEWSLETTER);
 
 class Link {
-  constructor(src, alt = "", url = [], text = "") {
+  constructor(src, alt = "", url = [], text = "", className = "active") {
     this.src = src;
     this.alt = alt;
     this.url = url;
     this.text = text;
+    this.className = className;
   }
 }
 
@@ -47,7 +48,7 @@ class Grid {
     for (let i = 0; i < rows; ++i) {
       const newRow = [];
       for (let j = 0; j < cols; ++j) {
-        newRow.push(new Link(Debian));
+        newRow.push(new Link(Debian, "", [], "", "inactive"));
       }
       this.grid.push(newRow);
     }

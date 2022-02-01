@@ -1,4 +1,4 @@
-import Grid from "./images";
+import Grid from "./links";
 import "./hjkl.css";
 import { sayHi } from "./module";
 

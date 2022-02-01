@@ -1,9 +1,11 @@
+import Books from "./img/books.png";
 import CRA from "./img/create-react-app.svg";
 import Calendar from "./img/google-calendar-logo.png";
 import Cambridge from "./img/cambridge.png";
 import Codewars from "./img/codewars.png";
 import Cpp from "./img/cpp.png";
 import Debian from "./img/debian.png";
+import Discord from "./img/discord.png";
 import Duolingo from "./img/duolingo_logo.png";
 import Github from "./img/Octocat.png";
 import Javascript from "./img/javascript-logo.png";
@@ -11,13 +13,16 @@ import Lua from "./img/lua_logo.png";
 import MDN from "./img/mdn-logo-png-transparent.png";
 import Macmillan from "./img/macmillan.png";
 import Mail from "./img/mail.png";
+import Meet from "./img/meet.png";
 import Mui from "./img/mui.png";
+import Neovim from "./img/neovim.png";
 import Python from "./img/python.svg";
 import RPi from "./img/RPi-Logo-small.png";
 import React from "./img/react.svg";
 import Router from "./img/react-router-logo.png";
 import Sheets from "./img/google-sheets.png";
 import Typescript from "./img/ts.png";
+import Vim from "./img/vim-logo.png";
 import W3schools from "./img/w3schools.svg";
 import Webpack from "./img/webpack.svg";
 import Youtube from "./img/youtube.png";
@@ -97,6 +102,7 @@ const python = new Link(
   "Python"
 );
 const lua = new Link(Lua, "Lua", ["https://www.lua.org/"], "Lua");
+const books = new Link(Books, "Programming books", [], "Programming books");
 
 // React libraries
 const react = new Link(React, "React", ["https://reactjs.org/"], "React");
@@ -145,6 +151,7 @@ const github = new Link(
 );
 const mail = new Link(Mail, "Mail", [], "Gmail");
 const calendar = new Link(Calendar, "Google", [], "Calendar");
+const meet = new Link(Meet, "Google meet", [], "Google meet");
 const youtube = new Link(
   Youtube,
   "Youtube",
@@ -168,13 +175,13 @@ const codewars = new Link(
 const cambridge = new Link(
   Cambridge,
   "Cambridge",
-  "https://dictionary.cambridge.org/",
+  ["https://dictionary.cambridge.org/"],
   "Cambridge dictionary"
 );
 const macmillan = new Link(
   Macmillan,
   "Macmillan",
-  "https://www.macmillandictionary.com/",
+  ["https://www.macmillandictionary.com/"],
   "Macmillan"
 );
 
@@ -182,22 +189,28 @@ const macmillan = new Link(
 const debian = new Link(
   Debian,
   "Debian, the universal OS",
-  "https://www.debian.org/",
+  ["https://www.debian.org/"],
   "Debian"
 );
+
 const rpi = new Link(
   RPi,
   "RPi",
-  "https://www.raspberrypi.org/",
+  ["https://www.raspberrypi.org/"],
   "Raspberry Pi"
 );
+
 const newsletter = new Link(Sheets, "Newsletter", [,], "Newsletter");
 
-const languages = [cpp, javascript, ts, python, lua, mdn, w3schools];
+const vim = new Link(Vim, "Vim - the editor", [], "Vim");
+const neovim = new Link(Neovim, "Neovim", [], "Neovim");
+const discord = new Link(Discord, "Discord", [], "Discord");
+
+const languages = [cpp, javascript, ts, python, lua, mdn, w3schools, books];
 const libraries = [react, mui, cra, router, webpack];
-const services = [github, mail, calendar, youtube, duolingo, codewars];
-const dictionaries = [cambridge, macmillan];
-const misc = [debian, rpi, newsletter];
+const services = [github, mail, calendar, meet, youtube, codewars];
+const dictionaries = [cambridge, macmillan, duolingo];
+const misc = [debian, rpi, vim, neovim, discord, newsletter];
 
 grid.insertColumn(0, languages);
 grid.insertColumn(1, libraries);

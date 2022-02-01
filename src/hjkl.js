@@ -44,6 +44,10 @@ const selector = document.createElement("div");
 selector.setAttribute("id", "selector");
 big.appendChild(selector);
 
+const showCommand = document.createElement("div");
+showCommand.setAttribute("class", "command");
+root.appendChild(showCommand);
+
 let row = 0;
 let col = 0;
 rects[row][col].classList.add("selected");
@@ -52,6 +56,7 @@ let prefix = 1;
 let command = "";
 
 const select = (key) => {
+  if (!/[0-9]/.test(key)) command += key;
   switch (key) {
     case "j":
       row = row + prefix <= 7 ? row + prefix : 7;
@@ -76,8 +81,7 @@ const select = (key) => {
       col = 4;
       break;
     case "g":
-      if (command.length === 0) command = "g";
-      else if (command === "g") {
+      if (command === "gg") {
         row = 0;
         command = "";
       }
@@ -109,6 +113,8 @@ const select = (key) => {
   }
   selector.style.top = `${row * 12.5}%`;
   selector.style.left = `${col * 20}%`;
+  showCommand.innerHTML = `<span>${prefix > 1 ? prefix : ""}${command}</span>`;
+  if (command !== "g") command = "";
 };
 
 document.body.onkeydown = (e) => select(e.key);
